@@ -1,49 +1,58 @@
 .sidebar {
-    width: 50%;
-    height: 95vh;
-    color: #969c9f;
-}
+  width: 50%;
+  height: 95vh;
+  color: #969c9f;
 
-.sidebar__items {
+  // Scrollbars(библиотека)
+  .sidebar__items {
     width: 97%;
     border-radius: 10px;
     background-color: #3a3d3e;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding: 10px 20px;
-}
 
-.sidebar__content_address {
-    font-size: 22px;
-    cursor: default;
-}
+    &:focus {
+      background-color: #4a4f50;
+    }
 
-.sidebar__content_buttons {
-    margin-top: 14px;
-    display: flex;
-}
+    .sidebar__content_address {
+      font-size: 24px;
+      cursor: pointer;
+    }
 
-.sidebar__content_button {
+    .sidebar__content_buttons {
+      margin-top: 14px;
+      display: flex;
+    }
+  }
+
+  .sidebar__content_button {
     margin-right: 20px;
     cursor: pointer;
     background-color: #282c2d;
     padding: 6px 8px;
     border-radius: 5px;
+  }
 }
 
-.sidebar__items:focus {
-    background-color: #4a4f50;
-}
-
+// Media Брейкпоинты
 @media (max-width: 840px) {
-    .sidebar {
-        width: 95%;
-    }
+  .sidebar {
+    width: 95%;
 
     .sidebar__content_address {
-        font-size: 20px;
+      font-size: 20px;
     }
 
     .sidebar__content_button {
-        margin-right: 10px;
+      margin-right: 10px;
     }
+  }
+}
+
+@media (max-width: 430px) {
+  .sidebar__content_button {
+    padding: 2px 2px;
+    font-size: 14px;
+  }
 }
